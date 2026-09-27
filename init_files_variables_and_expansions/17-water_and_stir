@@ -1,5 +1,2 @@
 #!/bin/bash
-a=$(echo "$WATER" | tr "water" "01234")
-b=$(echo "$STIR" | tr "stir." "01234")
-c=$(echo "obase=8;ibase=5;$a+$b" | bc)
-echo "$c" | tr "01234567" "bestchol"
+echo "obase=8;ibase=5;$(echo "$WATER" | tr "water" "01234")+$(echo "$STIR" | tr "stir." "01234")" | bc | tr "01234567" "bestchol"
