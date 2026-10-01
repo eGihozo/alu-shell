@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# List current directory contents, part after first dash, no hidden files
+for f in *; do
+echo "${f#*-}"
+done
